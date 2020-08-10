@@ -2,16 +2,20 @@ import random
 def plop():
    #print("Keep it logically awesome.")
 
-  f = open("quotes.txt")
+  f = open("quotes.txt", "r+")
+  str1 = "Not All Those Who Wander Are Lost\n"
+  f.write(str1)
   quotes = f.readlines()
   f.close()
+  last = len(quotes)
 
-
-  last = 13
-  randomQuote = random.randint (0, last)
+  randomQuote = random.randint(0, last)
   print(quotes[randomQuote])
-  lenQuotes = len(quotes)
-  print(lenQuotes)
-
+  randomQuote = random.randint(0, last)
+  print(quotes[randomQuote])
+  print(quotes[14])
+  print(quotes[last])
+  print(quotes)
+  print(last)
 if __name__== "__main__":
   plop()
